@@ -8,12 +8,12 @@ public class Checker {
 	}
 	
 	public boolean pathFound(String entry) {
-		if (entry.length() == 4) return true;
-		return false;	
+		return true;
+		//return false;
 	}
 	public boolean realWord(String entry) {
-		if (entry.length() == 4) return true;
-		return false;
+		return true;
+		//return false;
 	}
 
 	public Board getBoard() {
