@@ -1,0 +1,76 @@
+import java.util.Random;
+
+public class Die {
+
+	private String side1;
+	private String side2;
+	private String side3;
+	private String side4;
+	private String side5;
+	private String side6;
+	private boolean hasQ=false;
+	private int index;
+	
+	public Die(String s1) {
+		if(s1.contains("Q")) {
+			hasQ=true;
+			index=s1.indexOf('Q');
+		}
+		side1=s1.charAt(0)+"";
+		side2=s1.charAt(1)+"";
+		side3=s1.charAt(2)+"";
+		side4=s1.charAt(3)+"";
+		side5=s1.charAt(4)+"";
+		side6=s1.charAt(5)+"";
+		if(hasQ) {
+			switch(index) {
+			case(0):{
+				side1+="u";
+				break;
+				}
+			case(1):{
+				side2+="u";
+				break;
+			}
+			case(2):{
+				side3+="u";
+				break;
+			}
+			case(3):{
+				side4+="u";
+				break;
+			}
+			case(4):{
+				side5+="u";
+				break;
+			}
+			case(5):{
+				side6+="u";
+				break;
+			}
+			default:
+				
+			}
+		}
+	}
+	
+	public String dieSide() {
+		Random rand=new Random();
+		int randInt= rand.nextInt(6);
+		switch(randInt) {
+		case(0):
+			return side1;
+		case(1):
+			return side2;
+		case(2):
+			return side3;
+		case(3):
+			return side4;
+		case(4):
+			return side5;
+		case(5):
+			return side6;
+		}
+		return null;
+	}
+}
