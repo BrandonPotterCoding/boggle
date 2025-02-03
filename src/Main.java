@@ -8,7 +8,6 @@ import java.util.concurrent.TimeUnit;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String args[]) {
-
         Board board= new Board();
         Diebag bag= new Diebag();
         Boolean validTime=false;

@@ -8,7 +8,7 @@ public class Checker {
 	}
 	
 	public boolean pathFound(String entry) {
-		return true;
+		return board.findWord(entry);
 		//return false;
 	}
 	public boolean realWord(String entry) {
